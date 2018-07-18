@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -11,20 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150825154542) do
+ActiveRecord::Schema.define(version: 2018_07_18_154952) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "employees", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "project_id"
+    t.string "name"
+    t.integer "project_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+  create_table "employees_projects", force: :cascade do |t|
+    t.integer "employee_id"
+    t.integer "project_id"
+  end
+
   create_table "projects", force: :cascade do |t|
-    t.string   "name"
+    t.string "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

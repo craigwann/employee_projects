@@ -1,3 +1,6 @@
 class Employee < ActiveRecord::Base
-  belongs_to(:project)
+  has_and_belongs_to_many(:projects)
+  validates(:name, :presence => true)
+
+
 end
