@@ -25,8 +25,8 @@ describe('employee functionality through application', {:type => :feature}) do
     fill_in('employee_name', :with => "Guy Montagues")
     click_button('Add Employee')
     click_link("Guy Montague")
-    select("Book incineration project", :from => "project_id")
+    select("book incineration project", :from => "project_id")
     click_button("Submit")
-    expect(page).to have_content('Book incineration project')
+    expect(page).to have_content('book incineration project')
   end
 end
